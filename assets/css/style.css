@@ -88,19 +88,19 @@ main {
     grid-row: 6 / span 1;
 }
 
-.enterInitials{
+#enterInitials{
     font-size: 14px;
     grid-column: 1 / span 1;
     grid-row: 7 / span 1;
 }
 
-.enterInitialsTextArea {
+#enterInitialsTextArea {
     font-size: 14px;
-    grid-column: 2 / span 1;
-    grid-row: 7 / span 1;
+    grid-column: 3 / span 1;
+    grid-row: 6 / span 1;
 }
 
-.start-quiz {
+#start-quiz {
     background-color: var(--quaternary-color);
     color: var(--secondary-color);
     font-family: 'Segoe UI', sans-serif;
@@ -112,20 +112,31 @@ main {
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px; 
+    font-size: 1em;
+    text-align: center;
+    margin: auto;
 }
 
-.submit-quiz {
+#submit-quiz {
     background-color: var(--quaternary-color);
     color: var(--secondary-color);
     font-family: 'Segoe UI', sans-serif;
-    font-size: 14px;
+    font-size: 40px;
     border-radius: 5px; 
     grid-column: 3 / span 1;
-    grid-row: 7 / span 1;
+    grid-row: 7 / span 2;
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
+    font-size: 2em;
+    text-align: center;
+    margin: auto;
+}
+
+#start-quiz:hover,
+#submit-quiz:hover {
+    background-color: var(--tertiary-color);
 }
 
 #first-answer {
@@ -150,14 +161,13 @@ main {
     font-family: 'Segoe UI', sans-serif;
     font-size: 14px;
     border-radius: 5px; 
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
     grid-row: 7 / span 1;
     padding-top: 15px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
     margin-left: 20px;
-    margin-right: 20px; 
 }
 
 #third-answer {
@@ -188,4 +198,31 @@ main {
     padding-right: 15px;
     padding-bottom: 15px;
     margin-left: 20px;
+}
+
+#first-answer:hover,
+#second-answer:hover,
+#third-answer:hover,
+#fourth-answer:hover {
+    background-color: var(--tertiary-color);
+}
+
+#answerFeedbackGrid {
+    display: grid;
+    grid-template-columns: 4fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px 15px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#answerCorrect {
+    text-align: left;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+
+#answerWrong {
+    text-align: right;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
 }
