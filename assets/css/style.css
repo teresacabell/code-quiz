@@ -1,0 +1,191 @@
+:root {
+    --primary-color: #f2ece6;
+    --secondary-color: #d1daec;
+    --tertiary-color: #a4b6da;
+    --quaternary-color: #7a86ce;
+}
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 24px;
+    background-color: var(--secondary-color);
+}
+
+header {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: var(--quaternary-color);
+    height: 45px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1vw;
+}
+
+.btnHeader {
+    background-color: var(--quaternary-color);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1vw;
+    border-radius: 5px;
+    color: var(--secondary-color)
+}
+
+.btnHeader:hover {
+    background-color: var(--tertiary-color);
+}
+
+.btn {
+    display: flex;
+    border-radius: 5px;
+    background-color: var(--quaternary-color);
+    font-family: 'Segoe UI', sans-serif;
+    color: var(--secondary-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    margin-left: 35%;
+    margin-right: 35%;
+
+}
+
+#gridContainer {
+    display: grid;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 24px;
+    gap: 15px 15px;
+    grid-template-columns: repeat(2, 1fr) 2fr 1fr;
+    grid-template-rows: repeat(10, 1fr);
+}
+
+#displayQuestion {
+    text-align: center;
+    font-size: 34px;
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 5;
+    place-self: center;
+}
+
+#displayScore {
+    font-size: 14px;
+    grid-column: 1 / span 2;
+    grid-row: 6 / span 1;
+}
+
+.enterInitials{
+    font-size: 14px;
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 1;
+}
+
+.enterInitialsTextArea {
+    font-size: 14px;
+    grid-column: 2 / span 1;
+    grid-row: 7 / span 1;
+}
+
+.start-quiz {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    border-radius: 5px; 
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px; 
+}
+
+.submit-quiz {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    border-radius: 5px; 
+    grid-column: 3 / span 1;
+    grid-row: 7 / span 1;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+#first-answer {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    border-radius: 5px; 
+    grid-column: 1 / span 2;
+    grid-row: 6 / span 1;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+
+}
+
+#second-answer {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    border-radius: 5px; 
+    grid-column: 1 / span 1;
+    grid-row: 7 / span 1;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+#third-answer {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    border-radius: 5px; 
+    grid-column: 1 / span 2;
+    grid-row: 8 / span 1;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+}
+
+#fourth-answer {
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    border-radius: 5px; 
+    grid-column: 1 / span 2;
+    grid-row: 9 / span 1;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+}
