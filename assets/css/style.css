@@ -4,3 +4,64 @@
     --tertiary-color: #a4b6da;
     --quaternary-color: #7a86ce;
 }
+
+body {
+    background-color: var(--secondary-color);
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--quaternary-color);
+    justify-content: space-between;
+    height: 40px;
+    padding: 10px 10px 0px 10px;
+}
+
+.btnHeader {
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+}
+
+.btnHeader:hover {
+    background-color: var(--tertiary-color);
+}
+
+#timeRemaining {
+    color: var(--quaternary-color);
+    background-color: var(--primary-color);
+}
+
+#beginQuiz {
+    border-radius: 5px; 
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+}
+
+#beginQuiz:hover {
+    background-color: var(--tertiary-color);
+}
+
+#quiz {
+    width: 500px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    border: 2px dotted var(--quaternary-color);
+}
+
+#return,
+#wipe {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+    padding: 15px;
+    position: relative;
+}
+
+.hide {
+    display: none;
+}

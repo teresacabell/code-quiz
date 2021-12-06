@@ -17,16 +17,19 @@
         </div>
         <!-- Time Remaining-->
         <div>
-            <p>Remaining time:<span id="timeRemaining"></span></p>
+            <p>Remaining time:<span id="timeRemaining">xxx</span></p>
         </div>
     </header>
 
     <main id="quiz">
-        <div id="questions">
+        <div id="start">
             <h2>Coding Quiz</h2>
             <p> Answer the questions, but keep an eye on the clock. Wrong answers will deduct 10 seconds from the remaining time.</p>
-            <ul id="answersUl"></ul>
             <button id="beginQuiz">Begin Quiz</button>
+        </div>
+        <div id="questions" class="hide">
+            <h3 id="question-text"></h3>
+            <div id="answersDiv"></div>
         </div>
     </main>
 
