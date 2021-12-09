@@ -1,12 +1,15 @@
 var score = 0;
 var questionIndex = 0;
-var remainingTime = 60;
+var remainingTime = 75;
+var timerId;
 
-var start=document.getElementById("start");
-var beginQuiz=document.getElementById("beginQuiz");
-var questionsDiv=document.getElementById("questions");
+var start = document.getElementById("start");
+var beginQuiz = document.getElementById("beginQuiz");
+var questionsDiv = document.getElementById("questions");
+var feedbackEl = document.querySelector("#feedback")
+var timerEl = document.querySelector("#time");
 
-
+// code questions
 var questions = [
     {
         text: "Commonly used data types do NOT include", 
@@ -33,13 +36,32 @@ var questions = [
         choices: ["quotation marks", "parenthesis", "curly brackets", "hashes"],
         answer: "B"
     }
+
 ]
+
 function startGame(){
-    // call the questions
     // hide startGame div
     start.setAttribute("class", "hide")
     questionsDiv.removeAttribute("class")
+
+    // call the questions
     callQuestion()
+
+    // start timer
+    timerId = setInterval(second, 1000)
+
+    // start timer
+    timeEl.textContent = remainingTime;
+}
+
+// create timer
+function second() {
+    remainingTime--;
+    timeEl.textContent = remainingTime;
+
+    if (remainingTime <=0) {
+        quizEnd()
+    }
 }
 
 function callQuestion() {
@@ -57,13 +79,16 @@ function callQuestion() {
         button.setAttribute("data-choice", choice)
         button.onclick=evaluateAnswer;
     })
-
 }
 
 function evaluateAnswer() {
     var choice=this.getAttribute("data-choice")
     if (choice !== questions[questionIndex].answer) {
         console.log("wrong")
+        remainingTime -= 10;
+            if (remainingTime < 0) {
+                remainingTime = 0;
+            }
     }
     else {
         console.log("right")
