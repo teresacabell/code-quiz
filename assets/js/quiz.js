@@ -9,28 +9,28 @@ var questionsDiv=document.getElementById("questions");
 
 var questions = [
     {
-        text: "question1", 
-        choices: ["A", "B", "C", "D"],
-        answer: "A"
-    },
-    {
-        text: "question2", 
-        choices: ["A", "B", "C", "D"],
+        text: "Commonly used data types do NOT include", 
+        choices: ["strings", "booleans", "alerts", "numbers"],
         answer: "B"
     },
     {
-        text: "question3", 
-        choices: ["A", "B", "C", "D"],
-        answer: "C"
-    },
-    {
-        text: "question4", 
-        choices: ["A", "B", "C", "D"],
+        text: "Arrays in Javascript can be used to store", 
+        choices: ["numbers and strings", "other arrays", "booleans", "all of the above"],
         answer: "D"
     },
     {
-        text: "question5", 
-        choices: ["A", "B", "C", "D"],
+        text: "String values must be enclosed in ______ when being assigned to variables ", 
+        choices: ["square brackets", "curly brackets", "quotation marks", "parenthesis"],
+        answer: "C"
+    },
+    {
+        text: "A very useful tool used during development and debugging for printing content to the debugger", 
+        choices: ["Javascript", "terminal/bash", "for loops", "console logs"],
+        answer: "D"
+    },
+    {
+        text: "The condition in an if/then statment is enclosed in", 
+        choices: ["quotation marks", "parenthesis", "curly brackets", "hashes"],
         answer: "B"
     }
 ]
