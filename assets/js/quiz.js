@@ -5,6 +5,7 @@ var timerId;
 var start = document.getElementById("start");
 var beginQuiz = document.getElementById("beginQuiz");
 var questionsDiv = document.getElementById("questions");
+var quizDiv = document.getElementById("quiz");
 var feedbackEl = document.querySelector("#feedback")
 var timerEl = document.querySelector("#timeRemaining");
 var endQuizEl = document.getElementById('end');
@@ -64,7 +65,7 @@ function startGame() {
 }
 
 function saveScore() {
-    var initials = "XYZ";
+    var initials = "";
     var scoreObj = {
         initials: initials, 
         finalScore: score * remainingTime
@@ -101,9 +102,9 @@ function evaluateAnswer() {
     if (choice !== questions[questionIndex].answer) {
         console.log("wrong")
         remainingTime -= 10;
-        questionsDiv.classList.add("fail")
+        quizDiv.classList.add("fail")
         setTimeout(function(){
-            questionsDiv.classList.remove("fail")
+            quizDiv.classList.remove("fail")
         }, 500)
         if (remainingTime <= 0) {
             remainingTime = 0;
@@ -111,7 +112,10 @@ function evaluateAnswer() {
     }
     else {
         score++;
-        console.log("right")
+        quizDiv.classList.add("success")
+        setTimeout(function(){
+            quizDiv.classList.remove("success")
+        }, 500)
     }
     questionIndex++;
     if (questionIndex === questions.length) {
