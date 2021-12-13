@@ -58,10 +58,6 @@ function startGame() {
     // call the questions
     callQuestion()
     time = setInterval(runTimer, 1000)
-    // start timer
-    // timerId = setInterval(second, 1000)
-    // start timer
-    // timerEl.textContent = remainingTime;
 }
 
 function saveScore() {

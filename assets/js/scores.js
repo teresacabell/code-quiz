@@ -1,5 +1,7 @@
 var highScoresArray = JSON.parse(localStorage.getItem("highScores"));
-var scoreList = document.getElementById("scoresUl")
+var scoreList = document.getElementById("scoresOl")
+
+
 var sortedArray = highScoresArray.sort(function(a,b){
     return b.finalScore - a.finalScore
 })
@@ -8,4 +10,5 @@ sortedArray.forEach(function(score){
     li.textContent = score.initials + " " + score.finalScore
     scoreList.appendChild(li)
 })
-console.log(sortedArray)
+
+
